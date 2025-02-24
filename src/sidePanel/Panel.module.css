@@ -1,0 +1,26 @@
+.list {
+  padding: 20px 0px 0px 0px;
+  margin: 0;
+  list-style: none;
+}
+
+.tile {
+  margin-bottom: 10px;
+  padding: 15px 10px 15px 10px;
+  list-style: none;
+  box-shadow: gray 0px 0px 5px;
+}
+
+.orignal {
+  margin: 0;
+  margin-bottom: 5px;
+  list-style: none;
+  color: #000099;
+  font-size: medium;
+}
+
+.translated {
+  margin: 0;
+  list-style: none;
+  font-size: medium;
+}
