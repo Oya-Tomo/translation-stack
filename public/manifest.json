@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Translation Stack",
+  "version": "0.0.0",
+  "permissions": [
+    "sidePanel",
+    "tabs",
+    "scripting",
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": ["<all_urls>", "chrome-extension://**/*"],
+  "side_panel": {
+    "default_path": "sidePanel/index.html"
+  },
+  "background": {
+    "service_worker": "assets/background.js"
+  },
+  "options_page": "options/index.html",
+  "commands": {
+    "translateSelectedText": {
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      },
+      "description": "Translate selected text"
+    },
+    "redirectPdfViewer": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "Redirect PDF viewer"
+    }
+  }
+}
