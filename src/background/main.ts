@@ -23,14 +23,11 @@ chrome.contextMenus.onClicked.addListener((info) => {
 
 chrome.commands.onCommand.addListener((command) => {
   if (command === "translateSelectedText") {
-    console.log("Catch command: ", command);
-
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const tab = tabs[0];
       chrome.scripting.executeScript({
         target: { tabId: tab.id! },
         func: () => {
-          console.log("Execute script");
           const selection = window.getSelection();
           if (selection) {
             const text = selection.toString();
@@ -58,7 +55,6 @@ chrome.commands.onCommand.addListener((command) => {
         )}`;
         chrome.tabs.update(tab.id!, { url: pdfJsUrl });
       } else {
-        console.log("The current tab is not a PDF.");
       }
     });
   }
