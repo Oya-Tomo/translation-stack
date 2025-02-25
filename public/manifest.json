@@ -9,11 +9,9 @@
     "scripting",
     "contextMenus",
     "storage",
-    "activeTab",
-    "webRequest",
-    "webRequestBlocking"
+    "activeTab"
   ],
-  "host_permissions": ["<all_urls>", "chrome-extension://**/*"],
+  "host_permissions": ["<all_urls>"],
   "side_panel": {
     "default_path": "sidePanel/index.html"
   },
